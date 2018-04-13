@@ -6,11 +6,11 @@
  * Time: 3:31 PM
  */
 namespace App\Services\ChainDiscounts;
-use App\Abstracts\DiscountChain;
 use App\Models\Customer;
 use App\Models\Order;
+use App\Services\DiscountAbstractClass;
 
-class OneThousandRevenueDiscount extends DiscountChain
+class OneThousandRevenueDiscount extends DiscountAbstractClass
 {
     public function applyDiscount(Order &$order, &$discount)
     {

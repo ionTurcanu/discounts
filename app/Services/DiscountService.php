@@ -9,11 +9,11 @@
 namespace App\Services;
 
 use App\Models\Order;
-use App\Services\ChainDiscounts\DiscountApplierService;
+use App\Services\ChainDiscounts\DiscountChain;
 
 class DiscountService{
     public function getOrderDiscounts (Order $order) {
-        DiscountApplierService::apply($order, $discounts);
+        DiscountChain::apply($order, $discounts);
         return $discounts;
     }
 }

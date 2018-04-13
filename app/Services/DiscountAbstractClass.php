@@ -6,11 +6,11 @@
  * Date: 4/13/2018
  * Time: 3:52 PM
  */
-namespace App\Abstracts;
+namespace App\Services;
 
 use App\Models\Order;
 
-abstract class DiscountChain{
+abstract class DiscountAbstractClass{
     private $successor = null;
 
     final public function setSuccessor($handler){

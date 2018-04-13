@@ -7,7 +7,7 @@
  */
 namespace App\Services\ChainDiscounts;
 
-class DiscountApplierService{
+class DiscountChain{
     public static function apply(&$order, &$discount) {
         $cheapestDiscount = new CheapestCategoryItemDiscount();
         $secondDiscount = new SecondCategoryItemDiscount();

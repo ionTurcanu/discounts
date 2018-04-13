@@ -8,11 +8,11 @@
  */
 namespace App\Services\ChainDiscounts;
 
-use App\Abstracts\DiscountChain;
 use App\Models\Order;
 use App\Models\Product;
+use App\Services\DiscountAbstractClass;
 
-class SecondCategoryItemDiscount extends DiscountChain
+class SecondCategoryItemDiscount extends DiscountAbstractClass
 {
     public function applyDiscount(Order &$order, &$discount)
     {

@@ -1,8 +1,8 @@
 <?php
 namespace App\Services\ChainDiscounts;
-use App\Abstracts\DiscountChain;
 use App\Models\Order;
 use App\Models\Product;
+use App\Services\DiscountAbstractClass;
 
 /**
  * Created by PhpStorm.
@@ -10,7 +10,7 @@ use App\Models\Product;
  * Date: 4/13/2018
  * Time: 3:29 PM
  */
-class CheapestCategoryItemDiscount  extends DiscountChain {
+class CheapestCategoryItemDiscount  extends DiscountAbstractClass {
     /**
      * @param Order $order
      * @return $this
