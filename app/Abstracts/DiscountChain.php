@@ -10,7 +10,7 @@ namespace App\Abstracts;
 
 use App\Models\Order;
 
-abstract class DiscountHandler{
+abstract class DiscountChain{
     private $successor = null;
 
     final public function setSuccessor($handler){

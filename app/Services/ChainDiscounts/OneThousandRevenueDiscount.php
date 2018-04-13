@@ -6,22 +6,21 @@
  * Time: 3:31 PM
  */
 namespace App\Services\ChainDiscounts;
-use App\Abstracts\DiscountHandler;
+use App\Abstracts\DiscountChain;
 use App\Models\Customer;
 use App\Models\Order;
 
-class OneThousandRevenueDiscount extends DiscountHandler
+class OneThousandRevenueDiscount extends DiscountChain
 {
     public function applyDiscount(Order &$order, &$discount)
     {
         $minRevenue = 1000;
-        $customer = Customer::find($order->customer_id);
 
         $order->total = $order->items->sum('total');
 
         $appliedDiscount = 0;
-        if ($customer->revenue > $minRevenue) {
-            $appliedDiscount = $order->total * 0.2;
+        if ($order->customer->revenue > $minRevenue) {
+            $appliedDiscount = round($order->total * 0.2, 2);
             $order->total = $order->total - $appliedDiscount;
         }
 

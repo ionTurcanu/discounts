@@ -1,6 +1,6 @@
 <?php
 namespace App\Services\ChainDiscounts;
-use App\Abstracts\DiscountHandler;
+use App\Abstracts\DiscountChain;
 use App\Models\Order;
 use App\Models\Product;
 
@@ -10,7 +10,7 @@ use App\Models\Product;
  * Date: 4/13/2018
  * Time: 3:29 PM
  */
-class CheapestCategoryItemDiscount  extends DiscountHandler {
+class CheapestCategoryItemDiscount  extends DiscountChain {
     /**
      * @param Order $order
      * @return $this
@@ -19,7 +19,7 @@ class CheapestCategoryItemDiscount  extends DiscountHandler {
         $categoryId = 1;
         $appliedDiscount = 20;
         $groupProducts = Product::where('category', '=', $categoryId)->pluck('category', 'id')->keys();
-        $cheapest = $order->items->whereIn('product_id', $groupProducts)->sortBy('total')->first();
+        $cheapest = $order->items->whereIn('productId', $groupProducts)->sortBy('total')->first();
         $toSubstract = 0;
         if ($cheapest) {
             $toSubstract = $cheapest->total * $appliedDiscount / 100;
