@@ -14,6 +14,9 @@ To migrate customers and products data to the database, you'll need to run
 **php artisan migrate** and 
 **php artisan db:seed**
 
+In order to change the input data, please update the file mock-order.json,
+located at storage/mocks.
+
 If you need me to provide some explanations about the solution, you can find me at _**ion.turcanu@stefanini.com**_
 
 Kind regards,

@@ -16,7 +16,7 @@ use App\Models\Product;
 class OrderDeserializer{
 
     public function deserialize(){
-        $jsonOrder = json_decode(file_get_contents(storage_path('mocks/order-1.json')), 1);
+        $jsonOrder = json_decode(file_get_contents(storage_path('mocks/mock-order.json')), 1);
 
         $order = new Order();
         $order->customer = Customer::find($jsonOrder['customer-id']);
