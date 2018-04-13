@@ -1,0 +1,31 @@
+{
+  "id": "3",
+  "customer_id": "3",
+  "items": [
+    {
+      "product_id": "A101",
+      "quantity": "2",
+      "unit_price": "9.75",
+      "total": "19.50"
+    },
+    {
+      "product_id": "A102",
+      "quantity": "1",
+      "unit_price": "49.50",
+      "total": "49.50"
+    },
+    {
+      "product_id": "B102",
+      "quantity": "57",
+      "unit_price": "49.50",
+      "total": "2821.5"
+    },
+    {
+      "product_id": "B101",
+      "quantity": "18",
+      "unit_price": "49.50",
+      "total": "891"
+    }
+  ],
+  "total": "3781.5"
+}
